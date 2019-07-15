@@ -21,7 +21,7 @@ Features/variables correlated to each other that could affect the final model we
 
 Lease remaining time was also calculated from the lease start year, so both features are correlated. In this case, we know that lease remaining time has a more direct influence on the price of flats so the former was used.
 
-# Feature normalization
+# Feature Normalization
 
 Finally, all features were normalized by subtracting the mean and dividing by standard deviation. I found that this method has few outliers and is easier to use when subsequently testing new data. For example, a person living in Woodlands with floor size area of 120m2, we could easily normalize the data to test the results than use sklearn normalizer.
 
