@@ -21,6 +21,8 @@ Features/variables correlated to each other that could affect the final model we
 
 Lease remaining time was also calculated from the lease start year, so both features are correlated. In this case, we know that lease remaining time has a more direct influence on the price of flats so the former was used.
 
+<b>Updated 19 May 2020:</b> It seems that although <b>lease remaining time</b> can be calculated by 99 - (current year - lease start year), it's direct correlation to the <b>lease start year</b> is not very high (less than 0.1). Interestingly, using both lease start year and lease remaining time together seems to yield better results (slightly lower RMSE). It seems like models are able to tap on the additional data of the lease start year with the current purchase year to assess the economic climate back then and the current economic climate (with current year).
+
 # Feature Normalization
 
 Finally, all features were normalized by subtracting the mean and dividing by standard deviation. I found that this method has few outliers and is easier to use when subsequently testing new data. For example, a person living in Woodlands with floor size area of 120m2, we could easily normalize the data to test the results than use sklearn normalizer.
